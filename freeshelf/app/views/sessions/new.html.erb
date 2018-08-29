@@ -1,0 +1,15 @@
+<h1>Log In</h1>
+
+<% if flash[:notice] %>
+<p class="alert alert-success"><%= flash[:notice] %></p>
+<% end %>
+<% if flash[:error_message]%>
+<p class="alert alert-danger"><%= flash[:error_message] %></p>
+<% end %>
+<%= form_with(url: session_path) do %>
+    <%=label_tag :User_Name %><br>
+    <%=text_field_tag :user_name %><br>
+    <%=label_tag :password %><br>
+    <%=password_field_tag :password %><br>
+    <%=submit_tag "Log in", :class => "btn btn-outline-info"%>
+<% end %>

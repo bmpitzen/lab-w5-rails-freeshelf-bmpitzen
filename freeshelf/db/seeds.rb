@@ -16,5 +16,8 @@
 end
 
 10.times do
-  User.create(user_name: Faker::Internet.username(5..8))
+  User.create(
+    user_name: Faker::Internet.username(5..8),
+    password: 'hello'
+  )
 end
